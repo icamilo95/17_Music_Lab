@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <title>Document</title>
+</head>
+<body>
+   
+<h3>Edit Artist</h3>
+
+<form action="/artists/<%= @artist.id%>" method="POST">
+   <input type="hidden" name = "_method" value = "PUT">
+   Name: <input type="text" name="name" value="<%= @artist.name%>">
+   <input type="submit" value="Add">
+</form>
+
+
+<form action="/artists/<%= @artist.id%>" method="POST">
+   <input type="hidden" name = "_method" value = "DELETE">
+   <input type="submit" value="Delete">
+</form>
+
+
+
+</body>
+</html>

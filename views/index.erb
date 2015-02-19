@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <title>Document</title>
+</head>
+<body>
+   
+   <h3>List of artists</h3>
+
+<% @artists.each do |artist| %>
+  <li><%= artist.name %> <a href="/artists/<%= artist.id %>/edit">Edit</a> </li>
+<% end %>
+
+
+<form action="/artists/new">
+   <input type="submit" value="Add new artist">
+</form>
+
+</body>
+</html>
